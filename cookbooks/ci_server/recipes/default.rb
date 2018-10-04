@@ -1,2 +1,5 @@
-include_recipe 'ci_server::mirror_server_config'
-include_recipe 'ci_server::packages_config'
+include_recipe 'ci_server::install_wget'
+include_recipe 'ci_server::install_unzip'
+include_recipe 'ci_server::install_ngrok'
+include_recipe 'ci_server::install_endpoint'
+include_recipe 'ci_server::install_python3pip'

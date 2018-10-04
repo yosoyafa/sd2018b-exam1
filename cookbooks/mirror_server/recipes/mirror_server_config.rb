@@ -4,7 +4,6 @@ bash 'mirror_server_config' do
   yum update
   mkdir /var/repo
   cd /var/repo
-  yum install -y httpd
   systemctl start httpd
   systemctl enable httpd
   yum install -y createrepo

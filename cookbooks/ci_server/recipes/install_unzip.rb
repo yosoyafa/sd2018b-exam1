@@ -1,7 +1,5 @@
-cookbook_file '/home/vagrant/package.json' do
-  source 'package.json'
-  owner 'root'
-  group 'root'
-  mode '0644'
-  action :create
+bash 'install_unzip' do
+	  code <<-EOH
+       sudo yum install unzip
+  	  EOH
 end
