@@ -5,7 +5,7 @@ info:
   version: "0.1.0"
 
 paths:
-  /ciserver/repository/changed:
+  /ci_server/updates:
     post:
       x-swagger-router-controller: gm_analytics
       operationId: handlers.manage_pullrequest
