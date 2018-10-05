@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "centos_v0.2.0"
+  config.vm.box = "centos"
 
   config.vm .define "dhcp_server" do |dhcp_server|
     dhcp_server.vm.network "public_network", bridge:"eno1", ip: "192.168.131.102", netmask: "255.255.255.0"
@@ -11,16 +11,16 @@ Vagrant.configure("2") do |config|
       chef.cookbooks_path = "cookbooks"
       chef.add_recipe "dhcp_server"
       chef.add_recipe "httpd"
-      end  
+      end
   end
-  
+
   config.vm .define "mirror_server" do |mirror_server|
     mirror_server.vm.network "public_network", bridge:"eno1", ip: "192.168.131.103", netmask: "255.255.255.0"
     mirror_server.vm.provision :chef_solo do |chef|
       chef.install = false
       chef.cookbooks_path = "cookbooks"
-      chef.add_recipe "mirror_server"
       chef.add_recipe "httpd"
+      chef.add_recipe "mirror_server"
       end
   end
 
@@ -41,7 +41,7 @@ Vagrant.configure("2") do |config|
       chef.cookbooks_path = "cookbooks"
       chef.add_recipe "httpd"
       chef.add_recipe "mirror_client"
-      end  
+      end
   end
-  
+
 end
