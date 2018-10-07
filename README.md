@@ -180,11 +180,14 @@ Ahora, revisamos los paquetes que contiene el Mirror Server, y vemos que posee l
 ls /var/repolist
 ```
 ![][8]
+
 Con el Mirror Server listo, desde el Mirror Client se verifica el estado del Mirror Server y se procede a obtener los paquetes que él aloja:
 ```
 
-```
+```  
+
 ![][9]
+  
 ![][10]
 
 
