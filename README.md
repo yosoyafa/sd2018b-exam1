@@ -202,7 +202,7 @@ Con el Mirror Server listo, desde el Mirror Client se verifica el estado del Mir
 [7]: images/ngrok200.png
 [8]: images/mirror-lleno.png
 [9]: images/yum-list-all.png
-[10]: images/paquetes-cliente.png
+[10]: images/paquetesenclient.png
 
 
 
