@@ -188,6 +188,16 @@ Con el Mirror Server listo, desde el Mirror Client se verifica el estado del Mir
   
 ![][10]
 
+### Dificultades encontradas
+La mayor dificultad durante el desarrollo de la actividad fue el manejo de las actualizaciones en el Mirror Client, ya que, al revisar el *repo*, éste seguía vacío, cuando ya se habían hecho las actualizaciones en el Mirror Server. Ésto se solucionó mediante el siguiente comandos en el Mirror Server:
+```
+createrepo --update /var/repo
+```
+Y en el Mirror Client:
+```
+yum clean all
+yum upgrade
+yum update
 
 
 
