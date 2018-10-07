@@ -198,7 +198,7 @@ Y en el Mirror Client:
 yum clean all
 yum upgrade
 yum update
-
+```
 
 
 [1]: images/keys.png
